@@ -43,7 +43,7 @@ void nn()
     TCanvas *canvas = new TCanvas("canvas", "Exponential Decay Fit", 800, 600);
     graph->Draw("AL");
 
-    graph->GetXaxis()->SetRangeUser(0, 2047);
+    graph->GetXaxis()->SetRangeUser(0, 511);
     canvas->Update();
     canvas->SaveAs("EnergyDeposition.png");
 

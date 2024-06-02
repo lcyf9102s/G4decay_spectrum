@@ -30,7 +30,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
     //G4int runID = run->GetRunID();
     //std::stringstream strRunID;
     //strRunID << runID;
-    nBins = 2048;
+    nBins = 512;
     globalHistogram.resize(nBins, 0.0);
 
     //man->OpenFile("output"+strRunID.str()+".root");
@@ -43,7 +43,7 @@ void MyRunAction::EndOfRunAction(const G4Run*)
 {
     //G4AnalysisManager *man = G4AnalysisManager::Instance();
     std::ofstream outFile("output.dat");
-    for(int i = 0; i < 2048; i++)
+    for(int i = 0; i < 512; i++)
     {
         outFile << i << " " << globalHistogram[i] << "\n";
     }
