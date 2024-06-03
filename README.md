@@ -1,4 +1,5 @@
 # G4decay_spectrum
+
 Isotopes decay simulation using Geant4  
 
 ![Cow2](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/vis.png "Cow1")  
@@ -11,8 +12,8 @@ P.s. 使用pips探测器模拟α粒子测量时要设置真空材料，否则输
 1. Co-60, 0~3 MeV, 1024 Channels, NaI Scintillator.  
 ![Co-60](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/Co60_0_3_1024.png "Co-60")  
 
-2. Cs-137, 0~1 MeV, 1024 Channels, NaI Scintillator.
+2. Cs-137, 0~1 MeV, 1024 Channels, NaI Scintillator.  
 ![Cs-137](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/Cs137_0_1_1024.png "Cs-137")  
 
-3. Po-218, 0~10 MeV, 1024 Channels, pips.
+3. Po-218, 0~10 MeV, 1024 Channels, pips.  
 ![Po-218](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/Po218_0_10_1024.png "Po-218")  
