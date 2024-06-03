@@ -6,8 +6,11 @@ Isotopes decay simulation using Geant4
 P.s. 使用pips探测器模拟α粒子测量时要设置真空材料，否则输出能谱峰漂移会比较严重。  
 
 ## Examples
-1. Co-60, 0~3 MeV, 1024 Channels.  
+1. Co-60, 0~3 MeV, 1024 Channels, NaI Scintillator.  
 ![Cow2](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/Co60_0_3_1024.png "Cow1")  
 
-2. Cs-137, 0~1 MeV, 1024 Channels.
+2. Cs-137, 0~1 MeV, 1024 Channels, NaI Scintillator.
 ![Cow2](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/Cs137_0_1_1024.png "Cow1")  
+
+3. Po-218, 0~10 MeV, 1024 Channels, pips.
+![Cow2](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/Po218_0_10_1024.png "Cow1")  
