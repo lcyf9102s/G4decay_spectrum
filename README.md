@@ -1,12 +1,8 @@
 # G4decay_spectrum
 
 Isotopes decay simulation using Geant4  
-<<<<<<< HEAD
 
 ![Cow2](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/vis.png "Cow1")  
-=======
-![GUI](https://github.com/lcyf9102s/G4decay_spectrum/raw/main/images/vis.png "GUI")  
->>>>>>> 7934a6589258af1d23c33a9cafcf801f12aae2fb
 通过改变质子数和原子量来改变核素种类，construction.cc中可以直接改探测器种类（NaI闪烁体、高纯锗、pips）  
 输出使用ROOT将dat数据绘制成多道分析器能谱图，道数和能量范围可以根据需要设置。  
 
