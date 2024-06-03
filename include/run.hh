@@ -18,9 +18,9 @@ public:
     virtual void EndOfRunAction(const G4Run*);
     //void AddEventAction(MyEventAction* eventAction);
     void AddHist(G4double fEdep) {
-        if((fEdep > 1)&&(fEdep < 1.5))
+        if((fEdep > 0)&&(fEdep < 10))
     {
-        int ch = ceil(((fEdep-1)*512)/0.5);
+        int ch = ceil(((fEdep)*512)/10);
         globalHistogram[ch] += 1;
     }
     };

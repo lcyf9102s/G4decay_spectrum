@@ -80,16 +80,16 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true); // physical world G4ThreeVector是中心点坐标
 
     solidVacuum = new G4Box("vacuumWorld", 0.25*m, 0.25*m, 0.25*m);
-    logicVacuum = new G4LogicalVolume(solidVacuum, Air_0, "logicVacuum");
+    logicVacuum = new G4LogicalVolume(solidVacuum, vacuum, "logicVacuum");
     physVacuum = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicVacuum, "physVacuum", logicWorld, false, 0, true);
 
     //solidRadiator = new G4Box("solidRadiator", 0.5*m, 0.5*m, 0.1*m); // solid radiator
     //logicRadiator = new G4LogicalVolume(solidRadiator, Air_0, "logicRadiator"); // logical  radiator
     //physRadiator = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.38*m), logicRadiator, "physRadiator", logicWorld, false, 0, true); //  physical radiator
 
-    solidScintillator = new G4Tubs("solidScintillator", 0.*cm, 8.*cm, 10*cm, 0*deg, 360*deg);
-    logicScintillator = new G4LogicalVolume(solidScintillator, NaI, "logicScintillator");
-    physScintillator = new G4PVPlacement(0, G4ThreeVector(0., 0., 13.*cm), logicScintillator, "physScintillator", logicVacuum, false, 0, true);
+    //solidScintillator = new G4Tubs("solidScintillator", 0.*cm, 8.*cm, 10*cm, 0*deg, 360*deg);
+    //logicScintillator = new G4LogicalVolume(solidScintillator, NaI, "logicScintillator");
+    //physScintillator = new G4PVPlacement(0, G4ThreeVector(0., 0., 13.*cm), logicScintillator, "physScintillator", logicVacuum, false, 0, true);
     
     
     //solidHPGe = new G4Tubs("solidHPGe", 0.*cm, 5.*cm, 10*cm, 0*deg, 360*deg);
@@ -97,11 +97,11 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     //physHPGe = new G4PVPlacement(0, G4ThreeVector(0., 0., 15.*cm), logicHPGe, "physHPGe", logicWorld, false, 0, true);
         
 
-    //solidPIPS = new G4Tubs("solidPIPS", 0.*cm, 2.5*cm, 0.02*cm, 0*deg, 360*deg);
-    //logicPIPS = new G4LogicalVolume(solidPIPS, pips, "logicPIPS");
-    //physPIPS = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.2*cm), logicPIPS, "physPIPS", logicVacuum, false, 0, true);
+    solidPIPS = new G4Tubs("solidPIPS", 0.*cm, 2.5*cm, 0.02*cm, 0*deg, 360*deg);
+    logicPIPS = new G4LogicalVolume(solidPIPS, pips, "logicPIPS");
+    physPIPS = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.2*cm), logicPIPS, "physPIPS", logicVacuum, false, 0, true);
 
-    fScoringVolume = logicScintillator;
+    fScoringVolume = logicPIPS;
     // 探测器构建
     // 先定义solid空间，由于之后定义的灵敏体积要外部访问探测器的logical空间，因此需要在头文件中MyDetectorConstruction类中定义
     // 探测器的logical空间
